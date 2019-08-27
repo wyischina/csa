@@ -19,9 +19,10 @@ Do the following steps ONCE,
 5. At the bottom-right corner of Intellij, click on "master" and click on "New Branch".
 5. Create a new branch with your name (e.g. first.last). This will be your own branch of development.
 
+
 For each exercise,
-5. Develop code on your computer in your own branch.
-7. Commit and push your code to your own branch.
-7. Login to github.com to create a pull request of the changes you have made.
-9. Mr. Lee will review and comment on your code.
+1. Develop code on your computer in your own branch.
+2. Commit and push your code to your own branch.
+3. Login to github.com to create a pull request of the changes you have made.
+4. Mr. Lee will review and comment on your code.
 ------
