@@ -17,3 +17,4 @@ In order to join the class,
 7. Login to github.com to create a pull request of the changes you have made.
 
 
+---
