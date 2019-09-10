@@ -1,6 +1,6 @@
 package com.wyischina.flow;
 
-public class PracticeB3 {
+public class StarPrintingEven {
 
     public static void main(String[] args) {
         int y = 1;
