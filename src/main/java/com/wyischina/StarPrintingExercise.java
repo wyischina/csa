@@ -1,6 +1,6 @@
-package com.wyischina.flow;
+package com.wyischina;
 
-public class StarPrintingEven {
+public class StarPrintingExercise {
 
     public static void main(String[] args) {
         int y = 1;
@@ -12,9 +12,6 @@ public class StarPrintingEven {
                 cols = y;
             } else {
                 cols = 10 - y;
-            }
-            if (cols % 2 == 0) {
-                cols = cols * 2;
             }
             do {
                 System.out.print("* ");

@@ -1,4 +1,4 @@
-package com.wyischina.flow;
+package com.wyischina;
 
 import java.util.Scanner;
 

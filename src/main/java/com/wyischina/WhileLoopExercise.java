@@ -1,6 +1,6 @@
-package com.wyischina.flow;
+package com.wyischina;
 
-public class WhileDemonstration {
+public class WhileLoopExercise {
 
     public static void main(String[] args) {
 //        int n = 0;

@@ -1,6 +1,6 @@
-package com.wyischina.flow;
+package com.wyischina;
 
-public class ReverseString {
+public class ReverseStringExercise {
 
     public static void main(String[] args) {
         String text = "William";

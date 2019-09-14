@@ -1,8 +1,8 @@
-package com.wyischina.flow;
+package com.wyischina;
 
 import java.util.Scanner;
 
-public class IfElseDemonstration {
+public class IfElseExercise {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

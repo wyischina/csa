@@ -1,4 +1,4 @@
-package com.wyischina.io;
+package com.wyischina;
 
 import java.util.Scanner;
 

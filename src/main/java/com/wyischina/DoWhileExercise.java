@@ -1,8 +1,8 @@
-package com.wyischina.flow;
+package com.wyischina;
 
 import java.util.Scanner;
 
-public class DoWhileDemonstration {
+public class DoWhileExercise {
 
 
     public static void main(String[] args) {
