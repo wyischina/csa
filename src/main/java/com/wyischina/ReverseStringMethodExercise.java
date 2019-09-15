@@ -9,7 +9,11 @@ public class ReverseStringMethodExercise {
      * @return the reversed input string
      */
     public static String reverseString(String input) {
-        return "";
+        String output = "";
+        for (int i = 0; i < input.length(); i++) {
+            output = input.substring(i, i+1) + output;
+        }
+        return output;
     }
 
 }
