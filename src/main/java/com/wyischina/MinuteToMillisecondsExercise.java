@@ -1,8 +1,8 @@
-package com.wyischina.io;
+package com.wyischina;
 
 import java.util.Scanner;
 
-public class MinuteToMilliseconds {
+public class MinuteToMillisecondsExercise {
 
     public static void main(String[] args) {
         Scanner inputScanner = new Scanner(System.in);
