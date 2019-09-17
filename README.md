@@ -21,8 +21,11 @@ Do the following steps ONCE,
 
 
 For each exercise,
+1. Fetch code from the remote repository.
+2. Merge remote/origin/master branch into your own branch.
 1. Develop code on your computer in your own branch.
 2. Commit and push your code to your own branch.
 3. Login to github.com to create a pull request of the changes you have made.
 4. Mr. Lee will review and comment on your code.
+5. You will work on correction and repeat steps 4-6.
 ------
