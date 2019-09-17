@@ -15,15 +15,12 @@ public class MinMaxMethodExercise {
         } else {
             biggestNumber = secondNumber;
         }
-        System.out.println("The biggest number is " + biggestNumber);
+        System.out.println("max number is " + biggestNumber);
     }
 
     public static int findMaxNumber(int a, int b) {
-        if (a > b) {
-            return a;
-        } else {
-            return b;
-        }
+        // todo: complete this method to return the larger number of a and b.
+        return 0;
     }
 
 }
