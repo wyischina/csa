@@ -16,12 +16,7 @@ public class MethodCompositionExercise {
 
     public static double factorial(double n) {
         // todo: write a loop that computes the factorial of n
-        // return 0;
-        long expected = 1;
-        for (int k = 1; k <= n; k++) {
-            expected = expected * k;
-        }
-        return expected;
+        return 0;
     }
 
     public static double add(double a, double b) {
