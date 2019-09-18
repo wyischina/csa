@@ -4,19 +4,15 @@ public class MethodCompositionExercise {
 
 
     public static double sine(int x) {
-        // todo: Express the maclaurin series for estimating sine(x) in terms of
         // a composition of the add/subtract/multiply/divide methods. Your expression should only
         // go up to the third term of the maclaurin series.
         //
         // i.e. x - x^3/3! + x^5/5!
-
-        return 0.0;
+        return add(subtract(x, divide(power(x, 3), factorial(3))), divide(power(x, 5), factorial(5)));
     }
 
 
     public static double factorial(double n) {
-        // todo: write a loop that computes the factorial of n
-        // return 0;
         long expected = 1;
         for (int k = 1; k <= n; k++) {
             expected = expected * k;
