@@ -19,8 +19,11 @@ public class MinMaxMethodExercise {
     }
 
     public static int findMaxNumber(int a, int b) {
-        // todo: complete this method to return the larger number of a and b.
-        return 0;
+        if(a>b) {
+            return a;
+        }else{
+            return b;
+        }
     }
 
 }
