@@ -8,7 +8,7 @@ public class PrimeMethodExercise {
         System.out.println("2,3,5,7,11,13,17,19,23,29");
     }
 
-    public boolean isPrime(int a) {
+    public static boolean isPrime(int a) {
         // todo: return true if a is prime, false otherwise
         Scanner i = new Scanner(System.in);
         System.out.println("Enter a positive number");
