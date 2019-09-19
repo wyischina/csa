@@ -15,7 +15,6 @@ public class PrimeMethodExercise {
         }
     }
 
-
     public static boolean isPrime(int a) {
         // todo: return true if a is prime, false otherwise
         for (int i = 2; i <= Math.sqrt(a); i = i + 1) {
