@@ -9,9 +9,8 @@ public class MethodCompositionExercise {
         // go up to the third term of the maclaurin series.
         //
         // i.e. x - x^3/3! + x^5/5!
-        double result = x - divide(power(x, 3), factorial(3)) + divide(power(x, 5), factorial(5));
 
-        return result;
+        return add(subtract(x, divide(power(x, 3), factorial(3))),divide(power(x, 5), factorial(5)));
     }
 
 
