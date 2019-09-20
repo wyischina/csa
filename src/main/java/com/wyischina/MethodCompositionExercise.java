@@ -9,15 +9,21 @@ public class MethodCompositionExercise {
         // go up to the third term of the maclaurin series.
         //
         // i.e. x - x^3/3! + x^5/5!
+        double sineX =  add(subtract( x , divide(power(x,3) , factorial(3))) , divide(power(x , 5) , factorial(5)));
 
-        return 0.0;
+        return sineX;
     }
 
 
-    public static double factorial(double n) {
+    public static double factorial(int n) {
         // todo: write a loop that computes the factorial of n
-        return 0;
-    }
+        double factorial = 1.0;
+
+        for(int i = 1; i <= n; i++){
+            factorial = multiply(factorial, i);
+        }
+        return factorial;
+        }
 
     public static double add(double a, double b) {
         return a + b;
