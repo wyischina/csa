@@ -18,7 +18,7 @@ public class PalindromeExercise {
             return false;
         }
         for (int i = word.length(); i > 0; i--){
-            reversedWord.append(word.substring(i - 1, i));
+            reversedWord.append(word, i - 1, i);
         }
         return word.equals(reversedWord.toString());
     }
