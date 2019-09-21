@@ -2,8 +2,7 @@ package com.wyischina;
 
 public class MaclaurinSeries {
 
-    public double sine(double x, int n) {
-        // todo: calculate x to the nth term.
+    public double sine(double x, int k) {
         return 0.0;
     }
 
