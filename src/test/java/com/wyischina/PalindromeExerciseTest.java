@@ -29,7 +29,7 @@ class PalindromeExerciseTest {
 
     @Test
     void isPalindromeEmptyString() {
-        assertFalse(PalindromeExercise.isPalindrome(""));
+        assertTrue(PalindromeExercise.isPalindrome(""));
     }
 
     @Test

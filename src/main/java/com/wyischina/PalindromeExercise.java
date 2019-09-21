@@ -12,8 +12,11 @@ public class PalindromeExercise {
      * @return true if word is a palindrome, false otherwise.
      */
     public static boolean isPalindrome(String word) {
-        // todo:
-        return false;
+        String reversed = "";
+        for(int i = 0; i < word.length(); i++) {
+            reversed = word.substring(i, i+1) + reversed;
+        }
+        return reversed.toLowerCase().equals(word.toLowerCase());
     }
 
 
