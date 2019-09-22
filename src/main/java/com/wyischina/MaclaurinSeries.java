@@ -5,9 +5,9 @@ public class MaclaurinSeries {
     public double sine(double x, int n) {
         // todo: calculate x to the nth term.
         double result = 0;
-        for (int i = 1; i < n; i+=2){
-            result += maclaurinTerm(x, n);
-            result -= maclaurinTerm(x, n);
+        for (int i = 1; i < n; i+=4){
+            result += maclaurinTerm(x, i);
+            result -= maclaurinTerm(x, i+2);
         }
         return result;
     }
