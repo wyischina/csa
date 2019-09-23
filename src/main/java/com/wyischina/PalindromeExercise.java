@@ -1,8 +1,8 @@
 package com.wyischina;
 
+
+
 public class PalindromeExercise {
-
-
     /**
      * This method will return true if word is a palindrome, false otherwise.
      * A palindrome is a word when reversed is the same as the original word.
@@ -12,9 +12,16 @@ public class PalindromeExercise {
      * @return true if word is a palindrome, false otherwise.
      */
     public static boolean isPalindrome(String word) {
-        // todo:
-        return false;
+        String wordReversed = "";
+
+        if(word.equals("")){
+            return false;
+        }
+
+        for(int i = word.length(); i > 0; i--){
+            wordReversed = wordReversed.concat(word.substring(i - 1, i ));
+        }
+
+        return wordReversed.toLowerCase().equals(word.toLowerCase());
     }
-
-
 }

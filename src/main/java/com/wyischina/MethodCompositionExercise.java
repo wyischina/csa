@@ -11,7 +11,8 @@ public class MethodCompositionExercise {
         // i.e. x - x^3/3! + x^5/5!
         double sineX =  add(subtract( x , divide(power(x,3) , factorial(3))) , divide(power(x , 5) , factorial(5)));
 
-        return sineX;
+        // i.e. 5! * (5 - 2)
+        return multiply(factorial(5), subtract(5, 2));
     }
 
 
