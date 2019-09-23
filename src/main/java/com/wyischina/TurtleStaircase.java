@@ -1,15 +1,14 @@
 package com.wyischina;
 
+import java.util.Scanner;
+
 public class TurtleStaircase {
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         Turtle turtle = new Turtle();
-        for(int i = 0; i < 10; i++) {
-            turtle.forward(20);
-            turtle.left(90);
-            turtle.forward(20);
-            turtle.right(90);
-        }
+        Scanner scanner = new Scanner(System.in);
+        // todo: 1) read the number of steps from the user.
+        // todo: 2) draw out 5 staircase steps.
     }
 
 }
