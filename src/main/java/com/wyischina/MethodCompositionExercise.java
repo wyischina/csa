@@ -10,7 +10,8 @@ public class MethodCompositionExercise {
         //
         // i.e. x - x^3/3! + x^5/5!
 
-        return 0.0;
+        // i.e. 5! * (5 - 2)
+        return multiply(factorial(5), subtract(5, 2));
     }
 
 
