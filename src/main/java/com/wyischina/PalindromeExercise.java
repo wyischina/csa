@@ -12,8 +12,13 @@ public class PalindromeExercise {
      * @return true if word is a palindrome, false otherwise.
      */
     public static boolean isPalindrome(String word) {
-        // todo:
-        return false;
+        int n = word.length();
+        for(int i = 0; i < n / 2; i++) {
+            if (word.charAt(i) != word.charAt(n - 1 - i)) {
+                return false;
+            }
+        }
+        return true;
     }
 
 
