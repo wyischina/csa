@@ -4,7 +4,7 @@ public class MethodCompositionExercise {
 
 
     public static double sine(int x) {
-        // todo: Express the maclaurin series for estimating sine(x) in terms of
+        // todo: Express the maclaurin series for estimating sine(x) in terms of x
         // a composition of the add/subtract/multiply/divide methods. Your expression should only
         // go up to the third term of the maclaurin series.
         //
@@ -16,6 +16,7 @@ public class MethodCompositionExercise {
 
     public static double factorial(double n) {
         // todo: write a loop that computes the factorial of n
+
         return 0;
     }
 
