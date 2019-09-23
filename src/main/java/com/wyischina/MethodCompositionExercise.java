@@ -18,7 +18,7 @@ public class MethodCompositionExercise {
     public static double factorial(double n) {
         // todo: write a loop that computes the factorial of n
         double store = 1;
-        for(int i = 2; i < n; i++) {
+        for(int i = 2; i <= n; i++) {
             store = store * i;
         }
         return store;
