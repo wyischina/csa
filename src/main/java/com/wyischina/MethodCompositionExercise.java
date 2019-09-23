@@ -10,13 +10,16 @@ public class MethodCompositionExercise {
         //
         // i.e. x - x^3/3! + x^5/5!
 
-        return 0.0;
+        return factorial(5);
     }
 
 
     public static double factorial(double n) {
-        // todo: write a loop that computes the factorial of n
-        return 0;
+        double x = 1;
+        for (double i = 2; i <= n; i++){
+            x = multiply(x, i);
+        }
+        return x;
     }
 
     public static double add(double a, double b) {
