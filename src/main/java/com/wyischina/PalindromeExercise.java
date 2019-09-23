@@ -12,9 +12,19 @@ public class PalindromeExercise {
      * @return true if word is a palindrome, false otherwise.
      */
     public static boolean isPalindrome(String word) {
-        // todo:
-        return false;
+        String output = "";
+
+        for (int i = 0; i < word.length(); i++) {
+            output = word.substring(i, i + 1) + output;
+        }
+        if (output.equals(word)) {
+            return true;
+        } else if (word.equals(" ")) {
+            return false;
+        } else {
+            return false;
+        }
     }
-
-
 }
+
+
