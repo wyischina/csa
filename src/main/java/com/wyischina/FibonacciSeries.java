@@ -19,7 +19,7 @@ public class FibonacciSeries {
         int store2 = 1;
         int i = 0;
         if (i>n) {
-            for (int x = 0; x <=n; ++x) {
+            for (int x = 0; x <=n; x++) {
                 x = store1 + store2;
                 store1 = store2;
                 store2 = x;
