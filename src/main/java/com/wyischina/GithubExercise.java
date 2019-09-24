@@ -5,5 +5,4 @@ public class GithubExercise {
     public static void main(String[] args) {
         System.out.println("Jun");
     }
-
 }
