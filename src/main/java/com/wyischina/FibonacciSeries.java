@@ -14,7 +14,18 @@ public class FibonacciSeries {
      * @param n nth term
      * @return the nth fibonnaci number
      */
+
     public static int fib(int n) {
-        return 0;
+        int previous = 0;
+        int latter = 1;
+        int result = 0;
+
+        for(int i = 0; i < n; i++){
+            result = previous + latter;
+            previous = latter;
+            latter = result;
+        }
+
+        return result ;
     }
 }

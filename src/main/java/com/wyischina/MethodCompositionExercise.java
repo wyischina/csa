@@ -20,7 +20,7 @@ public class MethodCompositionExercise {
         // todo: write a loop that computes the factorial of n
         double factorial = 1.0;
 
-        for(int i = 1; i <= n; i++){
+        for(int i = 2; i <= n; i++){
             factorial = multiply(factorial, i);
         }
         return factorial;
