@@ -20,4 +20,29 @@ class StringMethodsTest {
     void padLeftUnder() {
         assertEquals("Hello", new StringMethods().padLeft("Hello", 3, 'x'));
     }
+
+    @Test
+    void trimLeft() {
+        assertEquals("hello", new StringMethods().trim("   hello"));
+    }
+
+    @Test
+    void trimRight() {
+        assertEquals("hello", new StringMethods().trim("hello    "));
+    }
+
+    @Test
+    void trimBoth() {
+        assertEquals("hello", new StringMethods().trim("     hello    "));
+    }
+
+    @Test
+    void trimEmpty() {
+        assertEquals("", new StringMethods().trim(""));
+    }
+
+    @Test
+    void trimBlank() {
+        assertEquals("", new StringMethods().trim("        "));
+    }
 }
