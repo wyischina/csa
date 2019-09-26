@@ -27,4 +27,21 @@ public class StringMethods {
         return s;
     }
 
+
+    /**
+     * Trim any whitespace character at the beginning and end of a string.
+     *
+     * For example,
+     * trim("   Hello").equals("Hello");
+     * trim("    Hello     ").equals("Hello");
+     * trim("").equals("");
+     * trim("     ").equals("");
+     *
+     * @param s string to be trimmed
+     * @return the trimmed string
+     */
+    public String trim(String s) {
+        return "";
+    }
+
 }
