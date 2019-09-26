@@ -13,7 +13,15 @@ public class TurtleNgon {
     }
 
     public static void drawNgon(Turtle turtle, int n, int length) {
-        // todo: implement this method to draw a polygon of n-side.
+        int x = 180-((n-2)*180)/n;
+        int l = length;
+        for (int i = 0; i < n*n; i++){
+            if (i % n == 0){
+                l = (l/2);
+                }
+            turtle.forward(l);
+            turtle.left(x);
+        }
     }
 
 }
