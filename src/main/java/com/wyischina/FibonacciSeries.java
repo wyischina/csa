@@ -17,5 +17,4 @@ public class FibonacciSeries {
     public static int fib(int n) {
         return 0;
     }
-    int one =
 }

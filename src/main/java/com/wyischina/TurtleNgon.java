@@ -9,11 +9,16 @@ public class TurtleNgon {
         System.out.println("How many sides would you like to draw?");
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
-        drawNgon(turtle, n, 100);
+        drawNgon(turtle, n, 5);
     }
 
     public static void drawNgon(Turtle turtle, int n, int length) {
-        // todo: implement this method to draw a polygon of n-side.
+        int x = 180-((n-2)*180)/n;
+        for(int i=0; i<n; i++){
+
+            turtle.forward(length);
+            turtle.left(x);
+        }
     }
 
 }
