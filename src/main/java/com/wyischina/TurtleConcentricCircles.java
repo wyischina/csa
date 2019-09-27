@@ -2,18 +2,27 @@ package com.wyischina;
 
 
 import java.awt.*;
+import java.util.Scanner;
 
 public class TurtleConcentricCircles {
 
     public static void main(String[] args) {
         Turtle turtle = new Turtle();
         final int numberOfCircles = 10;
-        final int penWidth = 15;
+        final int penWidth = 1;
         turtle.width(penWidth);
-        for(int i = 0; i < numberOfCircles; i++) {
-            float saturation = 1 - (i * 1.0f / numberOfCircles);
-            Color color = Color.getHSBColor(1, saturation, 1);
-            drawCircle(turtle, 10 + 10 * i, 10 + i * 2, color);
+        Scanner scanner = new Scanner(System.in);
+        turtle.speed(5);
+        while(true) {
+            double randomHue = Math.random();
+            for(int i = 0; i < numberOfCircles; i++) {
+                float saturation = 1 - (i * 1.0f / numberOfCircles);
+                Color color = Color.getHSBColor((float) randomHue, saturation, 1);
+                drawCircle(turtle, 10 + 10 * i, 10 + i * 2, color);
+            }
+            System.out.println("Press enter to run again");
+            scanner.nextLine();
+            turtle.clear();
         }
     }
 
