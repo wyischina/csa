@@ -12,8 +12,13 @@ public class TurtleNgon {
         drawNgon(turtle, n, 100);
     }
 
-    public static void drawNgon(Turtle turtle, int n, int length) {
+    public static void drawNgon(Turtle turtle, int n, double length) {
         // todo: implement this method to draw a polygon of n-side.
+        double angle = 180 - (n-2) * 180 / n;
+        for(int i = 0; i < n; i++){
+            turtle.forward(length);
+            turtle.left(angle);
+        }
     }
 
 }
