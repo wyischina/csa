@@ -15,6 +15,19 @@ public class FibonacciSeries {
      * @return the nth fibonnaci number
      */
     public static int fib(int n) {
-        return 0;
+        if (n == 0) {
+            return 0;
+        } else if (n == 1) {
+            return 1;
+        }
+        int nMinus2 = 0;
+        int nMinus1 = 1;
+        int current = 0;
+        for(int i = 2; i <= n; i++) {
+            current = nMinus2 + nMinus1;
+            nMinus2 = nMinus1;
+            nMinus1 = current;
+        }
+        return current;
     }
 }
