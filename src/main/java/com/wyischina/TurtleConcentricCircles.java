@@ -8,7 +8,7 @@ public class TurtleConcentricCircles {
     public static void main(String[] args) {
         Turtle turtle = new Turtle();
         // todo: draw concentric circles
-        int n = 30;
+        int n = 80;
         double initialAngle = 180 - (90 - 360/(double)(2*n));
         int circlesNum = 10;
 
@@ -31,7 +31,7 @@ public class TurtleConcentricCircles {
          *  draw a circle in the middle of the screen
          */
         double length = 2 * Math.sin(Math.PI/(n)) * radius;
-        double angle = 180 - (n-2) * 180 / n;
+        double angle = 180 - (n-2) * 180 / (double)n;
         for(int i = 0; i < n; i++){
             turtle.forward(length);
             turtle.left(angle);
