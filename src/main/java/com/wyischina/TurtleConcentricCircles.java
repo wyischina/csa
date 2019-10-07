@@ -13,11 +13,12 @@ public class TurtleConcentricCircles {
         turtle.width(penWidth);
         Scanner scanner = new Scanner(System.in);
         turtle.speed(5);
+        Color color = Color.BLACK;
         while(true) {
-            double randomHue = Math.random();
+            double randomHue = 0; // Math.random();
             for(int i = 0; i < numberOfCircles; i++) {
-                float saturation = 1 - (i * 1.0f / numberOfCircles);
-                Color color = Color.getHSBColor((float) randomHue, saturation, 1);
+                // float saturation = 1 - (i * 1.0f / numberOfCircles);
+                // Color color = Color.getHSBColor((float) randomHue, saturation, 1);
                 drawCircle(turtle, 10 + 10 * i, 10 + i * 2, color);
             }
             System.out.println("Press enter to run again");
