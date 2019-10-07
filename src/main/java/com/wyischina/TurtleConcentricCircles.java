@@ -24,9 +24,6 @@ public class TurtleConcentricCircles {
         }
         turtle.up();
         turtle.home();
-
-
-
     }
 
     public static void drawCircle(Turtle turtle, int n, double radius) {
