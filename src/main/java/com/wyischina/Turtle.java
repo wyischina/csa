@@ -24,6 +24,10 @@ import java.awt.image.*;
 import java.io.*;
 import java.lang.reflect.Method;
 import java.util.*;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.Semaphore;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicReference;
 import javax.imageio.ImageIO;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
@@ -2656,4 +2660,35 @@ public class Turtle implements Runnable, ActionListener, MouseListener, MouseMot
 
 
     }
+
+    public int waitForKey() {
+        CountDownLatch latch = new CountDownLatch(1);
+        AtomicInteger key = new AtomicInteger();
+        KeyListener oneTimeKeyListener = new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent keyEvent) {
+
+            }
+
+            @Override
+            public void keyPressed(KeyEvent keyEvent) {
+                key.set(keyEvent.getKeyCode());
+                latch.countDown();
+                draw.removeKeyListener(this);
+            }
+
+            @Override
+            public void keyReleased(KeyEvent keyEvent) {
+
+            }
+        };
+        draw.addKeyListener(oneTimeKeyListener);
+        try {
+            latch.await();
+            return key.get();
+        } catch (InterruptedException e) {
+            throw new IllegalStateException("interrupted");
+        }
+    }
+
 }
