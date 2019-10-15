@@ -11,6 +11,8 @@ public class ExceptionHandlingExercise {
         System.out.println("Type in the divisor");
         double divisor = scanner.nextDouble();
 
+
+
         try {
 
         } catch (ArithmeticException e) {

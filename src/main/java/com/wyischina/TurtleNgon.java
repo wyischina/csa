@@ -8,6 +8,11 @@ public class TurtleNgon {
         Turtle turtle = new Turtle();
         double n = 40;
         drawNgon(turtle, n, 10);
+        boolean a = true;
+
+        boolean b = false;
+
+        System.out.print((a == !b) != false);
     }
 
     public static void drawNgon(Turtle turtle, double n, double length) {
@@ -17,7 +22,7 @@ public class TurtleNgon {
         double radius = (length * 360d) / (2 * angle * Math.PI);
 
         turtle.speed(10);
-        for (int count = 0; count < 10; count++) {
+        for (int count = 0; count < 1; count++) {
             turtle.up();
             turtle.right(90);
             turtle.forward(radius);
