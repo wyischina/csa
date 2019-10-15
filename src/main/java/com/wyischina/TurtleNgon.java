@@ -8,11 +8,6 @@ public class TurtleNgon {
         Turtle turtle = new Turtle();
         double n = 40;
         drawNgon(turtle, n, 10);
-        boolean a = true;
-
-        boolean b = false;
-
-        System.out.print((a == !b) != false);
     }
 
     public static void drawNgon(Turtle turtle, double n, double length) {
