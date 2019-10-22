@@ -6,7 +6,8 @@ public class ExceptionHandlingExercise {
 
     public static void main(String args[]) {
         Scanner scanner = new Scanner(System.in);
-        // todo
+        int dividend = scanner.nextInt();
+        int divisor = scanner.nextInt();
     }
 
 }
