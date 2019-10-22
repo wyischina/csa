@@ -10,6 +10,12 @@ public class Customer {
     }
 
     public int getTotalBalance(){
+        if(savingAcc == null){
+            return this.currentAcc.getBalance();
+        }
+        if(currentAcc == null){
+            return this.savingAcc.getBalance();
+        }
         return this.savingAcc.getBalance() + this.currentAcc.getBalance();
     }
 

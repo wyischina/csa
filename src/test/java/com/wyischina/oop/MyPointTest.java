@@ -65,9 +65,13 @@ public class MyPointTest {
         assertEquals(5, p.distance(q));
     }
 
-//    @Test
-//    public void testGetXY1(){
-//        MyPoint p = new MyPoint();
-//        assertEquals(new int[]{0,0}, p.getXY());
-//    }
+    @Test
+    public void testGetXY1(){
+        MyPoint p = new MyPoint();
+        int[] a = {0,0};
+        for(int i = 0; i < a.length; i++){
+            assertEquals(a[i], p.getXY()[i]);
+        }
+
+    }
 }
