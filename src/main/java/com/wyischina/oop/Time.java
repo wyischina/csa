@@ -42,7 +42,29 @@ public class Time {
     }
 
     public String toString(){
-        return hour + ":" + minute + ":" + second;
+        String timeString = "";
+
+        if (this.getHour() < 10) {
+            timeString += "0";
+        }
+
+        timeString += hour;
+        timeString += ":";
+
+        if (this.getMinute() < 10) {
+            timeString += "0";
+        }
+
+        timeString += minute;
+        timeString += ":";
+
+        if (this.getSecond() < 10) {
+            timeString += "0";
+        }
+
+        timeString += second;
+
+        return timeString;
     }
 
     public Time nextSecond(){

@@ -2,8 +2,7 @@ package com.wyischina.oop;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.List;
-
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MyPointTest {
@@ -68,10 +67,6 @@ public class MyPointTest {
     @Test
     public void testGetXY1(){
         MyPoint p = new MyPoint();
-        int[] a = {0,0};
-        for(int i = 0; i < a.length; i++){
-            assertEquals(a[i], p.getXY()[i]);
-        }
-
+        assertArrayEquals(new int[]{0, 0}, p.getXY());
     }
 }
