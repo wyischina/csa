@@ -12,4 +12,9 @@ public class PolarCoordinate {
         this.radius = radius;
         this.theda = theda;
     }
+
+    public boolean equals(Object obj){
+        PolarCoordinate another = (PolarCoordinate) obj;
+        return this.radius == another.radius && this.theda == another.theda;
+    }
 }

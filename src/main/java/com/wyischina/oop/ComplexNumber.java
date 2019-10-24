@@ -37,7 +37,7 @@ public class ComplexNumber {
 
     public boolean equals(Object obj){
         ComplexNumber another = (ComplexNumber)obj;
-        return this.real == another.real && this.imaginary == another.imaginary && this == another;
+        return this.real == another.real && this.imaginary == another.imaginary;
     }
 
     public String toString(){
