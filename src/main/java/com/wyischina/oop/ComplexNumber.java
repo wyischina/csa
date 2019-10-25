@@ -50,7 +50,7 @@ public class ComplexNumber {
 
     public PolarCoordinate polar(){
         double r = Math.sqrt(Math.pow(this.real,2) + Math.pow(this.imaginary,2));
-        double theda = Math.acos(Math.toRadians(this.real/r));
+        double theda = Math.acos(this.real/r);
         return new PolarCoordinate(r, theda);
     }
 }

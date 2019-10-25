@@ -68,12 +68,28 @@ public class Time {
     }
 
     public Time nextSecond(){
-        this.second++;
-        return this;
+        if(this.second == 59){
+            if(this.minute == 59){
+                if(this.hour == 23){
+                    return new Time(0, 0, 0);
+                }
+                return new Time(this.hour+1, 0, 0);
+            }
+            return new Time(this.hour, this.minute+1, 0);
+        }
+        return new Time(this.hour, this.minute, this.second+1);
     }
 
     public Time previousSecond(){
-        this.second--;
-        return this;
+        if(this.second == 0){
+            if(this.minute == 0){
+                if(this.hour == 0){
+                    return new Time(23, 59, 59);
+                }
+                return new Time(this.hour-1, 59, 59);
+            }
+            return new Time(this.hour, this.minute-1, 59);
+        }
+        return new Time(this.hour, this.minute, this.second-1);
     }
 }

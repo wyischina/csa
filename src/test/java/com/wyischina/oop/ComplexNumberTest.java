@@ -4,8 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class ComplexNumberTest {
 
@@ -24,28 +23,48 @@ public class ComplexNumberTest {
     @Test
     public void testAdd1(){
         ComplexNumber c = new ComplexNumber(3, 4);
-        ComplexNumber n = c.add(new ComplexNumber(3, 4));
-        assertEquals(new ComplexNumber(6, 8), n);
+        assertEquals(new ComplexNumber(6, 8), c.add(new ComplexNumber(3, 4)));
     }
 
     @Test
     public void testAdd2(){
         ComplexNumber c = new ComplexNumber(3, 4);
-        ComplexNumber n = c.add(10);
-        assertEquals(new ComplexNumber(13, 4), n);
+        assertEquals(new ComplexNumber(13, 4), c.add(10));
     }
 
     @Test
     public void testMultiply1(){
         ComplexNumber c = new ComplexNumber(3, 4);
-        ComplexNumber n = c.multiply(new ComplexNumber(3, 4));
-        assertEquals(new ComplexNumber(9, 16), n);
+        assertEquals(new ComplexNumber(9, 16), c.multiply(new ComplexNumber(3, 4)));
     }
 
     @Test
     public void testMultiply2(){
         ComplexNumber c = new ComplexNumber(3, 4);
-        ComplexNumber n = c.multiply(10);
-        assertEquals(new ComplexNumber(30, 4), n);
+        assertEquals(new ComplexNumber(30, 4), c.multiply(10));
+    }
+
+    @Test
+    public void testDivision1(){
+        ComplexNumber c = new ComplexNumber(3, 4);
+        assertEquals(new ComplexNumber(1, 1), c.division(new ComplexNumber(3, 4)));
+    }
+
+    @Test
+    public void testDivision2(){
+        ComplexNumber c = new ComplexNumber(3, 4);
+        assertEquals(new ComplexNumber(1, 4), c.division(3));
+    }
+
+    @Test
+    public void testConjugate(){
+        ComplexNumber c = new ComplexNumber(3, 4);
+        assertEquals(new ComplexNumber(3, -4), c.conjugate());
+    }
+
+    @Test
+    public void testPolar(){
+        ComplexNumber c = new ComplexNumber(3, 4);
+        assertEquals(new PolarCoordinate(5, Math.atan(4/3d)), c.polar());
     }
 }
