@@ -8,6 +8,7 @@ public class Human {
     String name;
 
     public Human(Date birthday) {
+
         this.age = 0; /*. calculate from birthday .*/
     }
 
