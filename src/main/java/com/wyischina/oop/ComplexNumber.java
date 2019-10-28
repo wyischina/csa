@@ -20,7 +20,7 @@ public class ComplexNumber {
     }
 
     public ComplexNumber multiply(ComplexNumber another){
-        return new ComplexNumber(this.real*another.real-(this.imaginary*another.imaginary), (this.imaginary*another.real)+(this.real*another.imaginary));
+        return new ComplexNumber((this.real*another.real)-(this.imaginary*another.imaginary), (this.imaginary*another.real)+(this.real*another.imaginary));
     }
 
     public ComplexNumber multiply(double realNumber){
@@ -28,13 +28,21 @@ public class ComplexNumber {
     }
 
     public ComplexNumber division(ComplexNumber another){
-//        ComplexNumber top = this.multiply(another.conjugate());
-//        ComplexNumber bottom = another.multiply(another.conjugate());
-        return this.multiply(another.conjugate()).division(another.multiply(another.conjugate()).real);
+        try {
+            return this.multiply(another.conjugate()).division(another.multiply(another.conjugate()).real);
+        }catch(ArithmeticException e){
+            System.out.println("cannot divide by zero.");
+            return null;
+        }
     }
 
     public ComplexNumber division(double realNumber){
+        try{
         return new ComplexNumber(this.real/realNumber, this.imaginary/realNumber);
+        } catch(ArithmeticException e){
+            System.out.println("cannot divide by zero.");
+            return null;
+        }
     }
 
     public boolean equals(Object obj){
