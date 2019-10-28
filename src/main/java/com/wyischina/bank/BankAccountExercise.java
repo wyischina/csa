@@ -8,7 +8,7 @@ public class BankAccountExercise {
         customer1.name = "John Smith";
 
         // 2. add a saving and current account to the newly created customer;
-        Account saving = new Account();
+        Account saving = new SavingAccount();
         Account current = new Account();
         customer1.setCurrentAccount(current);
         customer1.setSavingAccount(saving);
@@ -24,6 +24,7 @@ public class BankAccountExercise {
         t2.amount = 5000;
         t2.isDebit = true;
         saving.addTransaction(t2);
+
 
         // 5. add a $8000 credit transaction to the current account;
         Transaction t3 = new Transaction();

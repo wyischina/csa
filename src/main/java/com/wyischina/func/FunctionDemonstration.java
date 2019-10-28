@@ -12,9 +12,11 @@ public class FunctionDemonstration {
             "c(x) = x/2", x->x/2,
             "d(x) = -x", x->x*-1,
             "e(x) = sqrt(x)", Math::sqrt,
-            "f(x) = abs(x)", Math::abs,
-            "g(x) = x + 1", x-> x + 1,
-            "h(x) = x", x-> x));
+            "g(x) = x + 1", x-> x + 1
+    ));
+    /**"f(x) = abs(x)", Math::abs,*/
+    /**"h(x) = x", x-> x*/
+
     private static final List<String> FUNCTIONS_INDEX = new ArrayList<>(FUNCTIONS.keySet());
 
     public static void main(String[] args) {
