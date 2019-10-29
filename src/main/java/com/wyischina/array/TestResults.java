@@ -1,5 +1,9 @@
 package com.wyischina.array;
 
+/**
+ * An instance of a TestResults represent the test scores of a group of students in a single test.
+ * It provides several methods for producing statistics of the test.
+ */
 public interface TestResults {
 
     /**

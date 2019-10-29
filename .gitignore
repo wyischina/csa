@@ -28,3 +28,7 @@ out
 out/**
 target
 target/**
+
+.classpath
+.project
+.settings/*
