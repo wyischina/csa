@@ -8,4 +8,8 @@ public class Transaction {
         this.amount = amount;
         this.isDebit = isDebit;
     }
+
+    public Transaction() {
+
+    }
 }
