@@ -8,6 +8,8 @@ public class IfElseExercise {
         Scanner scanner = new Scanner(System.in);
         System.out.println("What is your age?");
 
+
+
         int age = scanner.nextInt();
         if (age > 17) {
             System.out.println("You are getting old");
@@ -15,7 +17,8 @@ public class IfElseExercise {
         } else {
             System.out.println("You are underaged");
         }
-
     }
+
+
 
 }
