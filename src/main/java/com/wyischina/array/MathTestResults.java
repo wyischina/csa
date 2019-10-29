@@ -1,6 +1,7 @@
 package com.wyischina.array;
 
 public class MathTestResults implements TestResults {
+
     @Override
     public void addScore(String studentName, int score) {
 
