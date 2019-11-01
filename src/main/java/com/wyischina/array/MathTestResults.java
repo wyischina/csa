@@ -19,26 +19,30 @@ public class MathTestResults implements TestResults {
     @Override
     public int getMaximumScore() {
         int max = 0;
-        for(int i = 0; i < allScores.length-1; i++){
-            max = Math.max(allScores[i].score,allScores[i+1].score);
+        for(int i = 0; i < currentIndex; i++){
+            //max = Math.max(allScores[i].score,allScores[i+1].score);
+            if(allScores[i].score > max){
+                max = allScores[i].score;
+            }
         }
         return max;
     }
 
     @Override
     public int getMinimumScore() {
-        int min = 0;
-        for(int i = 0; i < allScores.length-1; i++){
-            min = Math.min(allScores[i].score,allScores[i+1].score);
+        int min = 101;
+        for(int i = 0; i < currentIndex; i++){
+            //min = Math.min(allScores[i].score,allScores[i+1].score);
+            if(allScores[i].score < min){
+                min = allScores[i].score;
+            }
         }
         return min;
     }
 
     @Override
     public int getMeanScore() {
-        int meanScore = 0;
         int totalScoreValue = 0;
-        int currentIndex = allScores.length-1;
 
         for(int i = 0; i < currentIndex;i++){
             totalScoreValue += allScores[i].score;
@@ -51,7 +55,7 @@ public class MathTestResults implements TestResults {
         int highestScore = -1;
         String highestScorer = "";
 
-        for(int i = 0; i < allScores.length-1; i++){
+        for(int i = 0; i < currentIndex; i++){
             if(allScores[i].score > highestScore){
                 highestScore = allScores[i].score;
                 highestScorer = allScores[i].studentName;
@@ -62,13 +66,17 @@ public class MathTestResults implements TestResults {
 
     @Override
     public String[] getFailedStudents(int passScore) {
-        int n = 1;
-        String[] failedStudents = new String[n];
+        int failedStudentAmount = 0;
+        for(int i = 0; i < currentIndex; i++){
+            if(allScores[i].score < passScore){
+                failedStudentAmount++;
+            }
+        }
+        String[] failedStudents = new String[failedStudentAmount];
 
-        for(int i = 0; i < allScores.length-1;i++){
-            if(allScores[i].score <= passScore){
-                n++;
-                failedStudents[n] = allScores[i].studentName;
+        for(int i = 0; i < currentIndex;i++){
+            if(allScores[i].score < passScore){
+                failedStudents[i] = allScores[i].studentName;
             }
         }
         return failedStudents;
