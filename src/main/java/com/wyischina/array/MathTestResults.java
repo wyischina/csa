@@ -94,6 +94,18 @@ public class MathTestResults implements TestResults {
     }
 
     public void removeScore(String studentName){
+        int removalIndex = 0;
+        for(StudentScoreRecord studentScoreRecord: studentScoreRecordArray){
+            if(studentScoreRecord != null && studentScoreRecord.getStudentName().equals(studentName)) {
+                break;
+            }
+            removalIndex++;
+        }
 
+        for(int i = removalIndex; i < currentIndex; i++){
+            studentScoreRecordArray[removalIndex-1] = studentScoreRecordArray[removalIndex];
+        }
+
+        currentIndex--;
     }
 }

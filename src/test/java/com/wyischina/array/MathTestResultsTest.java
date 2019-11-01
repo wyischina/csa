@@ -88,4 +88,14 @@ public class MathTestResultsTest {
 
         assertArrayEquals(new String[]{"Lauron","David"}, testResults.getFailedStudents(60));
     }
+
+    @Test
+    public void testRemoveScore() {
+        TestResults testResults = new MathTestResults();
+        testResults.addScore("Dawei", 0);
+        testResults.addScore("one", 10);
+        testResults.addScore("two", 20);
+        testResults.removeScore("David");
+        assertEquals(2, testResults.getNumberOfScores());
+    }
 }

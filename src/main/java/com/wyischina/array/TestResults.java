@@ -52,4 +52,6 @@ public interface TestResults {
      */
     public String[] getFailedStudents(int passScore);
 
+    public void removeScore(String studentName);
+
 }
