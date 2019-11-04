@@ -32,8 +32,10 @@ public class MathTestResultsTest {
         MathTestResults s = new MathTestResults();
         s.addScore("Nick",89);
         s.addScore("Jun",95);
-        assertEquals(89,s.getMinimumScore());
+        s.addScore("Lauron",0);
+        assertEquals(0,s.getMinimumScore());
     }
+
     @Test
     public void testGetMeanScore(){
         MathTestResults s = new MathTestResults();
@@ -41,6 +43,12 @@ public class MathTestResultsTest {
         s.addScore("Nick", 60);
         assertEquals(45,s.getMeanScore());
     }
+    @Test
+    public void testGetMeanIsZero(){
+        MathTestResults s = new MathTestResults();
+        assertEquals(0,s.getMeanScore());
+    }
+
     @Test
     public void testGetStudentWithMaximumScore(){
         MathTestResults s = new MathTestResults();

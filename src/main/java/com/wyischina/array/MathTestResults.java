@@ -40,7 +40,6 @@ public class MathTestResults implements TestResults {
     public int getMinimumScore() {
         int min = 101;
         for(int i = 0; i < currentIndex; i++){
-            //min = Math.min(allScores[i].score,allScores[i+1].score);
             if(allScores[i].score < min){
                 min = allScores[i].score;
             }
@@ -51,11 +50,18 @@ public class MathTestResults implements TestResults {
     @Override
     public int getMeanScore() {
         int totalScoreValue = 0;
-
-        for(int i = 0; i < currentIndex;i++){
-            totalScoreValue += allScores[i].score;
+        int mean;
+        try {
+            for (int i = 0; i < currentIndex; i++) {
+                totalScoreValue += allScores[i].score;
+            }
+            mean = totalScoreValue / currentIndex;
+        } catch(ArithmeticException e) {
+            e.printStackTrace();
+            mean = 0;
+            return mean;
         }
-        return totalScoreValue/currentIndex;
+        return mean;
     }
 
     @Override
