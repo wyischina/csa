@@ -7,8 +7,16 @@ public class MathTestResults implements TestResults {
 
     @Override
     public void addScore(String studentName, int score) {
-        allScores[currentIndex] = new StudentScore(studentName, score);
-        currentIndex++;
+        if(allScores[allScores.length-1] == null) {
+            this.allScores[this.currentIndex] = new StudentScore(studentName, score);
+            currentIndex++;
+        } else {
+            StudentScore[] tempAddScore = new StudentScore[this.allScores.length+10];
+            System.arraycopy(allScores, 0, tempAddScore, 0, allScores.length);
+            this.allScores = tempAddScore;
+            currentIndex++;
+        }
+
     }
 
     @Override

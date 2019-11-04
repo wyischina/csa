@@ -10,7 +10,9 @@ public class MathTestResultsTest {
     public void testAddScore(){
         MathTestResults s = new MathTestResults();
         s.addScore("David",89);
-        assertEquals(1,s.getNumberOfScores());
+        s.addScore("John",69);
+        s.addScore("Jun",79);
+        assertEquals(3,s.getNumberOfScores());
     }
     @Test
     public void testGetNumberOfScores(){
