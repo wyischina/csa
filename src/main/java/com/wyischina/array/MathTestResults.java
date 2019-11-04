@@ -45,6 +45,9 @@ public class MathTestResults implements TestResults {
                 min = studentScores[i];
             }
         }
+        if(studentScores[0] == 0){
+            return 0;
+        }
         return min;
     }
 
@@ -52,10 +55,15 @@ public class MathTestResults implements TestResults {
     public int getMeanScore() {
         int sum = 0;
         int mean;
-        for (int i = 0; i < currentIndex; i++) {
-            sum = sum + studentScores[i];
+        try {
+            for (int i = 0; i < currentIndex; i++) {
+                sum = sum + studentScores[i];
+            }
+            mean = sum / currentIndex;
+        } catch (ArithmeticException e) {
+            e.printStackTrace();
+            mean = 0;
         }
-        mean = sum / currentIndex;
         return mean;
     }
 
@@ -82,11 +90,12 @@ public class MathTestResults implements TestResults {
         }
         String[] autKids = new String[failedStudents];
         int prevIndex = 0;
-        for (int i = 0; i < currentIndex; i++){
-            if (studentScores[i] < passScore){
+        for (int i = 0; i < currentIndex; i++) {
+            if (studentScores[i] < passScore) {
                 autKids[prevIndex] = studentNames[i];
                 prevIndex++;
             }
-        } return autKids;
+        }
+        return autKids;
     }
 }

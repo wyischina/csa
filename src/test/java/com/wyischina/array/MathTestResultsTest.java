@@ -3,8 +3,7 @@ package com.wyischina.array;
 import com.wyischina.oop.MyPoint;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class MathTestResultsTest {
 
@@ -20,7 +19,8 @@ public class MathTestResultsTest {
         t.addScore("John", 10);
         t.addScore("Will", 2);
         t.addScore("David", 3);
-        assertEquals(3, t.getNumberOfScores());
+        t.addScore("Jun", 20);
+        assertEquals(4, t.getNumberOfScores());
     }
 
 
@@ -43,12 +43,25 @@ public class MathTestResultsTest {
     }
 
     @Test
+    public void getMaximumNumTest2() {
+        TestResults t = new MathTestResults();
+        assertEquals(0, t.getMaximumScore());
+    }
+
+
+    @Test
     public void getMinNumTest() {
         TestResults t = new MathTestResults();
-        t.addScore("John", 100);
-        t.addScore("Will", 50);
+        t.addScore("John", 30);
+        t.addScore("Will", 10);
         t.addScore("David", 20);
-        assertEquals(20, t.getMinimumScore());
+        assertEquals(10, t.getMinimumScore());
+    }
+
+    @Test
+    public void getMinNumTest2() {
+        TestResults t = new MathTestResults();
+        assertEquals(0, t.getMinimumScore());
     }
 
     @Test
@@ -61,6 +74,12 @@ public class MathTestResultsTest {
     }
 
     @Test
+    public void getMeanNumTest2() {
+        TestResults t = new MathTestResults();
+        assertEquals(0, t.getMeanScore());
+    }
+
+    @Test
     public void getStudentWithMax() {
         TestResults t = new MathTestResults();
         t.addScore("John", 100);
@@ -68,6 +87,12 @@ public class MathTestResultsTest {
         t.addScore("David", 50);
         t.getMaximumScore();
         assertEquals("John", t.getStudentWithMaximumScore());
+    }
+
+    @Test
+    public void getStudentWithMax2() {
+        TestResults t = new MathTestResults();
+        assertNull(t.getStudentWithMaximumScore());
     }
 
     @Test
@@ -82,10 +107,9 @@ public class MathTestResultsTest {
     @Test
     public void getFailedStudentsTest2() {
         TestResults t = new MathTestResults();
-        t.addScore("John", 50);
+        t.addScore("John", 0);
         t.addScore("Will", 10);
         t.addScore("David", 20);
-        assertArrayEquals(new String[]{"Will", "David"}, t.getFailedStudents(30));
+        assertArrayEquals(new String[]{"John", "Will", "David"}, t.getFailedStudents(30));
     }
-
 }
