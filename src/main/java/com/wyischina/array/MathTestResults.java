@@ -3,8 +3,8 @@ package com.wyischina.array;
 public class MathTestResults implements TestResults {
 
     int index = 0;
-    int[] result = new int[10];
-    String[] name = new String[10];
+    int[] result = new int[100];
+    String[] name = new String[100];
 
     @Override
     public void addScore(String studentName, int score) {
