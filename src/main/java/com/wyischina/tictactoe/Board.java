@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Board {
 
-    String[][] cells = new String[3][3];
+    String[][] cells;
     int boardSize;
     private static final String EMPTY_CELL = "□";
 
@@ -14,6 +14,7 @@ public class Board {
     public Board(int boardSize) {
         assert boardSize <= 26 && boardSize > 1;
         this.boardSize = boardSize;
+        cells = new String[boardSize][boardSize];
     }
 
     /**
@@ -38,11 +39,25 @@ public class Board {
      * Print the board.
      */
     public void print() {
-        System.out.println("  A B C");
-        System.out.println("--------");
+        System.out.print("   ");
+        String headers = Move.getColumnHeaders(this.boardSize);
+        for(int i = 0; i < headers.length(); i++) {
+            System.out.print(headers.substring(i, i+1));
+            System.out.print(" ");
+        }
+        System.out.println();
+        System.out.print("---");
+        for(int i = 0; i < headers.length(); i++) {
+            System.out.print("--");
+        }
+        System.out.println();
         for (int i = 0; i < cells.length; i++) {
             System.out.print(i + 1);
-            System.out.print(" ");
+            if (i < 9) {
+                System.out.print("  ");
+            } else {
+                System.out.print(" ");
+            }
             for (int j = 0; j < cells[i].length; j++) {
                 String cell = cells[i][j];
                 System.out.print(cell == null ? EMPTY_CELL : cell);
@@ -116,7 +131,7 @@ public class Board {
     }
 
     private boolean isWinningCombination(String[] threeCells) {
-        assert threeCells.length == 3;
+        assert threeCells.length == boardSize;
         String firstChar = threeCells[0];
         if (firstChar == null) {
             return false;

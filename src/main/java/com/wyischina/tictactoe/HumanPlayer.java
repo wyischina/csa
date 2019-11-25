@@ -25,8 +25,8 @@ public class HumanPlayer extends Player {
                 System.out.println("Your input is invalid.");
                 continue;
             }
-            if (input.length() != 2) {
-                System.out.println("Your move must be 2 characters.");
+            if (input.length() < 2) {
+                System.out.println("Your move must be no less than 2 characters.");
                 continue;
             }
             int column = Move.getColumnHeaders(board.boardSize).indexOf(input.substring(0, 1).toUpperCase());
