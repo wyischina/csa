@@ -18,7 +18,13 @@ public class HumanPlayer extends Player {
         while(true) {
             Scanner scanner = new Scanner(System.in);
             System.out.println("Please enter your next move:");
-            String input = scanner.next();
+            String input;
+            try {
+                input = scanner.next();
+            } catch (Exception e) {
+                System.out.println("Your input is invalid.");
+                continue;
+            }
             if (input.length() != 2) {
                 System.out.println("Your move must be 2 characters.");
                 continue;
