@@ -1,5 +1,7 @@
 package com.wyischina.arraylist;
 
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class ArrayListPractice {
@@ -12,8 +14,13 @@ public class ArrayListPractice {
      * @return List contains all the even numbers in integers.
      */
     public List<Integer> findAllEvenNumbers(List<Integer> integers) {
-        // todo: implement this.
-        return null;
+        List<Integer> results = new ArrayList<>();
+        for(int item : integers) {
+            if (item % 2 == 0) {
+                results.add(item);
+            }
+        }
+        return results;
     }
 
     /**
@@ -28,8 +35,17 @@ public class ArrayListPractice {
      * @return List contains all the items in objects shifted to the left by one position.
      */
     public List shiftLeft1(List objects) {
-        // todo: implement this.
-        return null;
+        List results = new ArrayList();
+        Iterator iterator = objects.iterator();
+        if (!iterator.hasNext()) {
+            return results;
+        }
+        Object firstItem = iterator.next();
+        while(iterator.hasNext()) {
+            results.add(iterator.next());
+        }
+        results.add(firstItem);
+        return results;
     }
 
     /**
@@ -46,8 +62,10 @@ public class ArrayListPractice {
      * @return List contains all the items in objects shifted to the left by one position.
      */
     public List shiftLeftN(List objects, int n) {
-        // todo: implement this.
-        return null;
+        for(int i = 0; i < n; i++) {
+            objects = shiftLeft1(objects);
+        }
+        return objects;
     }
 
     /**
@@ -65,8 +83,13 @@ public class ArrayListPractice {
      * that all the even numbers come before all the odd numbers.
      */
     public List evenOdd(List<Integer> integers) {
-        // todo: implement this.
-        return null;
+        List results = findAllEvenNumbers(integers);
+        for(int item : integers) {
+            if (item % 2 != 0) {
+                results.add(item);
+            }
+        }
+        return results;
     }
 
 }
