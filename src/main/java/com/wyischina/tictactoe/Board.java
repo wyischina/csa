@@ -8,18 +8,20 @@ public class Board {
     int boardSize;
     private static final String EMPTY_CELL = "□";
 
-
-
     /**
      * Create a new board
      */
     public Board(int boardSize) {
+        assert boardSize <= 26 && boardSize > 1;
         this.boardSize = boardSize;
-        for (int row = 0; row < cells.length; row++) {
-            for (int col = 0; col < cells[row].length; col++) {
-                cells[row][col] = "□";
-            }
-        }
+    }
+
+    /**
+     * Get the board size.
+     * @return int the board size
+     */
+    public int getSize() {
+        return this.boardSize;
     }
 
     /**
@@ -42,7 +44,8 @@ public class Board {
             System.out.print(i + 1);
             System.out.print(" ");
             for (int j = 0; j < cells[i].length; j++) {
-                System.out.print(cells[i][j]);
+                String cell = cells[i][j];
+                System.out.print(cell == null ? EMPTY_CELL : cell);
                 System.out.print(" ");
             }
             System.out.println();
@@ -51,7 +54,7 @@ public class Board {
 
     public boolean isValidMove(Move move) {
         String symbol = cells[move.row][move.column];
-        return symbol.equals(EMPTY_CELL);
+        return symbol == null;
     }
 
     /**
@@ -115,11 +118,11 @@ public class Board {
     private boolean isWinningCombination(String[] threeCells) {
         assert threeCells.length == 3;
         String firstChar = threeCells[0];
-        if (firstChar.equals(EMPTY_CELL)) {
+        if (firstChar == null) {
             return false;
         }
         for(int i = 1; i < threeCells.length; i++) {
-            if (!threeCells[i].equals(firstChar)) {
+            if (threeCells[i] == null || !threeCells[i].equals(firstChar)) {
                 return false;
             }
         }

@@ -20,7 +20,7 @@ public class ComputerPlayer extends Player {
         do {
             int column = random.nextInt(3);
             int row = random.nextInt(3);
-            move = new Move(column, row);
+            move = new Move(board.boardSize, column, row);
         } while (!board.isValidMove(move));
         return move;
     }
