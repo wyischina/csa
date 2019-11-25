@@ -60,11 +60,11 @@ public class ArrayListPractice {
      * evenOdd([3, 3, 2]) → [2, 3, 3]
      * evenOdd([2, 2, 2]) → [2, 2, 2]
      *
-     * @param objects list of integers.
+     * @param integers list of integers.
      * @return Return a list that contains the exact same numbers as the given array, but rearranged so
      * that all the even numbers come before all the odd numbers.
      */
-    public List evenOdd(List<Integer> objects) {
+    public List evenOdd(List<Integer> integers) {
         // todo: implement this.
         return null;
     }
