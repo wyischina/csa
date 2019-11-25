@@ -7,6 +7,7 @@ import java.util.List;
 public class ArrayListDemonstration {
 
     public static void main(String[] args) {
+        Integer i = 0;
         List cars = new ArrayList();
         Iterator iterator = cars.iterator();
         while(iterator.hasNext()) {
