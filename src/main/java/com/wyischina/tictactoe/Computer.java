@@ -15,23 +15,14 @@ public class Computer extends Player {
         int u = random.nextInt(3);
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                if (strings[i][j].equals())
-            }
-        }
-        board.makeChange(r, u, "X ");
-        return true;
-    }
-    /*for (int i = 0; i < strings.length; i++) {
-        for (int j = 0; j < strings.length; j++) {
-            if (strings[i][j].equals(s)) {
-                boolean successful = board.makeChange(i, j, "O ");
-                if (!successful) {
-                    return false;
+                if (i == r && j == u) {
+                    boolean successful = board.makeChange(r, u,"X ");
+                    if (!successful) {
+                        return false;
+                    }
                 }
             }
         }
-    }
         return true;
-
-     */
+    }
 }

@@ -18,7 +18,6 @@ class Board {
         return false;
     }
 
-
     void printBoard() {
         System.out.println("  A B C");
         System.out.println("--------");
