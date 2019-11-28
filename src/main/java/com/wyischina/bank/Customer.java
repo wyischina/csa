@@ -3,7 +3,9 @@ package com.wyischina.bank;
 import java.util.Scanner;
 
 public class Customer{
-    private String nameOfCustomer;
+    public String name;
+    public String nameOfCustomer;
+
     private Account currentAccount;
     private Account savingAccount;
 

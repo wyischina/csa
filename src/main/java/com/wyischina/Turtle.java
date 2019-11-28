@@ -25,9 +25,7 @@ import java.io.*;
 import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.Semaphore;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.atomic.AtomicReference;
 import javax.imageio.ImageIO;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
@@ -2691,4 +2689,6 @@ public class Turtle implements Runnable, ActionListener, MouseListener, MouseMot
         }
     }
 
+    public void keyPressed() {
+    }
 }

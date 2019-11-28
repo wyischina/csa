@@ -5,7 +5,7 @@ public class BankAccountExercise {
     public static void main(String[] args) {
         // 1. create a new Customer with name "John Smith";
         Customer customer1 = new Customer();
-        customer1.name = "John Smith";
+        customer1.nameOfCustomer = "John Smith";
 
         // 2. add a saving and current account to the newly created customer;
         Account saving = new SavingAccount();
