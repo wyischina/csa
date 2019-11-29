@@ -2,6 +2,8 @@ package com.wyischina.oop;
 
 public class Student extends Human {
 
+    private String name;
+
     public Student() {
         super(0, null);
     }
