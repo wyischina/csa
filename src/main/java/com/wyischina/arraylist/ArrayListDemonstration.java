@@ -8,24 +8,24 @@ import java.util.*;
 public class ArrayListDemonstration {
 
     public static void main(String[] args) {
-        List<Integer> input = List.of(-4,2,6,1,8,0);
+        List<Integer> input = List.of(0,4,2,6,1,8);
         List output = new ArrayListDemonstration().selectionSort(input);
         System.out.println(output);
     }
 
 
     public List<Integer> selectionSort(List<Integer> input) {
-        List<Integer> remaining = new ArrayList<Integer>(input);
-        List<Integer> output = new ArrayList<Integer>();
+        List<Integer> output = new ArrayList<Integer>(input);
         for(int i = 0; i < input.size(); i++) {
-            int smallestIndex = 0;
-            for (int j = 1; j < remaining.size(); j++) {
-                if (remaining.get(j) < remaining.get(smallestIndex)) {
+            int smallestIndex = i;
+            for (int j = i + 1; j < output.size(); j++) {
+                if (output.get(j) < output.get(smallestIndex)) {
                     smallestIndex = j;
                 }
             }
-            output.add(remaining.get(smallestIndex));
-            remaining.remove(smallestIndex);
+            int ithValue = output.get(i);
+            output.set(i, output.get(smallestIndex));
+            output.set(smallestIndex, ithValue);
         }
         return output;
     }
