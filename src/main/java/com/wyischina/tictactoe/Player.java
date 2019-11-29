@@ -1,16 +1,13 @@
 package com.wyischina.tictactoe;
 
-public class Player {
+import java.util.Random;
 
-    protected Board board;
+public class Player {
+    Board board = new Board();
 
     String[][] strings = new String[3][3];
 
-    public Player(Board board) {
-        this.board = board;
-    }
-
-    public boolean playerInput(String s) {
+    void playerInput(String s) {
         for (int i = 0; i < strings.length; i++) {
             int num = 1;
             if (i == 0) {
@@ -35,13 +32,22 @@ public class Player {
         for (int i = 0; i < strings.length; i++) {
             for (int j = 0; j < strings.length; j++) {
                 if (strings[i][j].equals(s)) {
-                    boolean successful = board.makeChange(i, j, "O ");
-                    if (!successful) {
-                        return false;
-                    }
+                    board.makeChange(i, j, "O ");
                 }
             }
         }
-        return true;
+    }
+
+    void computerInput() {
+        Random random = new Random();
+        int r = random.nextInt(3);
+        int u = random.nextInt(3);
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (i == r && j == u) {
+                    board.makeChange(r, u, "X ");
+                }
+            }
+        }
     }
 }

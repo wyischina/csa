@@ -3,26 +3,19 @@ package com.wyischina.tictactoe;
 import java.util.Scanner;
 
 public class TicTacToe {
+    String[][] board = new String[3][3];
 
     public static void main(String[] args) {
-        Board display = new Board();
-        Player player = new Player(display);
-        Computer computer = new Computer(display);
+        Player player = new Player();
+        Board board = new Board();
         Scanner scanner = new Scanner(System.in);
-        display.printBoard();
-
+        TicTacToe ttt = new TicTacToe();
 
         while (true) {
-            boolean successful;
-            do {
-                String input = scanner.nextLine();
-                successful = player.playerInput(input);
-                if (!successful) {
-                    System.out.println("Please enter a valid input");
-                }
-            } while(!successful);
-
-            computer.computerInput();
+            board.printBoard();
+            String input = scanner.nextLine();
+            player.playerInput(input);
+            player.computerInput();
         }
     }
 }
