@@ -15,10 +15,11 @@ public class Main {
             AI AI = new AI();
             Stage board = new Stage();
             int amountOfTurns = 0;
-            System.out.println("Start Game");
+            System.out.println("New Game");
             System.out.println("");
 
             while (true) {
+                startN = random.nextInt(2);
 
                 String userInputN = "";
                 String userInputA = "";
@@ -47,7 +48,7 @@ public class Main {
                     player = new Player();
                     AI = new AI();
                     board = new Stage();
-                    continue;
+                    break;
                 }
 
                 System.out.println("");
@@ -65,6 +66,13 @@ public class Main {
                     System.out.println("User2 has won the game");
                     break;
                 }
+                if (amountOfTurns == 9) {
+                    System.out.println("DRAW...");
+                    player = new Player();
+                    AI = new AI();
+                    board = new Stage();
+                    break;
+                }
 
 
             }
@@ -72,21 +80,12 @@ public class Main {
             printStage(board);
             System.out.println("");
 
-            System.out.println("Do you want to be the start in the Next Game? Yes or No?");
-            String startNAnswer = "";
-            while(true){
-                startNAnswer = scanner.nextLine();
-                if(startNAnswer.toUpperCase().equals("YES")){
-                    startN = 0;
-                    break;
-                }
-                if(startNAnswer.toUpperCase().equals("NO")){
-                    startN = 1;
-                    break;
-                }
-                System.out.println("PLease type in a legitimate response...");
+            Scanner scanner1 = new Scanner(System.in);
+            System.out.println("Do you want to play a new Game?");
+            String userInput = scanner1.nextLine();
+            if(userInput.toLowerCase().equals("no")){
+                break;
             }
-
         }
 
     }

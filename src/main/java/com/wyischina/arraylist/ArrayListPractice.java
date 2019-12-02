@@ -1,5 +1,6 @@
 package com.wyischina.arraylist;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ArrayListPractice {
@@ -12,8 +13,16 @@ public class ArrayListPractice {
      * @return List contains all the even numbers in integers.
      */
     public List<Integer> findAllEvenNumbers(List<Integer> integers) {
-        // todo: implement this.
-        return null;
+        List<Integer> evenNumbers = new ArrayList<>();
+        if(integers.isEmpty()){
+            return integers;
+        }
+        for(int v:integers){
+            if(v%2==0){
+                evenNumbers.add(v);
+            }
+        }
+        return evenNumbers;
     }
 
     /**
@@ -28,8 +37,15 @@ public class ArrayListPractice {
      * @return List contains all the items in objects shifted to the left by one position.
      */
     public List shiftLeft1(List objects) {
-        // todo: implement this.
-        return null;
+        List leftShifted = new ArrayList();
+        if(objects.isEmpty()){
+            return leftShifted;
+        }
+        for(int i = 1; i < objects.size(); i++){
+            leftShifted.add(objects.get(i));
+        }
+        leftShifted.add(objects.get(0));
+        return leftShifted;
     }
 
     /**
@@ -46,8 +62,17 @@ public class ArrayListPractice {
      * @return List contains all the items in objects shifted to the left by one position.
      */
     public List shiftLeftN(List objects, int n) {
-        // todo: implement this.
-        return null;
+        List shiftLeftN = new ArrayList();
+        if(objects.isEmpty()){
+            return shiftLeftN;
+        }
+        for(int i = n; i < objects.size(); i++){
+            shiftLeftN.add(objects.get(i));
+        }
+        for (int i = 0; i < n; i++) {
+            shiftLeftN.add(objects.get(i));
+        }
+        return shiftLeftN;
     }
 
     /**
@@ -65,8 +90,21 @@ public class ArrayListPractice {
      * that all the even numbers come before all the odd numbers.
      */
     public List evenOdd(List<Integer> integers) {
-        // todo: implement this.
-        return null;
+        List evenOdd = new ArrayList();
+        if(integers.isEmpty()){
+            return evenOdd;
+        }
+        for(int i:integers){
+            if(i%2 == 0){
+                evenOdd.add(i);
+            }
+        }
+        for(int i:integers){
+            if(i%2 == 1){
+                evenOdd.add(i);
+            }
+        }
+        return evenOdd;
     }
 
 }
