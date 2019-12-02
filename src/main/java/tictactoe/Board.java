@@ -34,8 +34,10 @@ public class Board {
     }
 
     public void printBoard(){
+        int number = 1;
         String gameBoard = "";
         for(int i=0; i<3; i++){
+            gameBoard += number+" ";
             for(int j=0; j<3; j++){
                 if(board[i][j].toString().toUpperCase().equals("O"+"")){
                     gameBoard += " O";
@@ -45,6 +47,7 @@ public class Board {
                     gameBoard += " □";
                 }
             }
+            number++;
             gameBoard += "\n";
         }
 
