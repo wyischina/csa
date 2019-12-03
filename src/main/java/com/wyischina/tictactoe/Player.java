@@ -3,10 +3,15 @@ package com.wyischina.tictactoe;
 import java.util.Random;
 
 public class Player {
-    Board board = new Board();
+    Board board;
 
     String[][] strings = new String[3][3];
 
+    public Player(Board board) {
+        this.board = board;
+    }
+
+    //asserts value based on the input
     void playerInput(String s) {
         for (int i = 0; i < strings.length; i++) {
             int num = 1;
@@ -38,16 +43,11 @@ public class Player {
         }
     }
 
+    //assert value randomly
     void computerInput() {
         Random random = new Random();
         int r = random.nextInt(3);
         int u = random.nextInt(3);
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                if (i == r && j == u) {
-                    board.makeChange(r, u, "X ");
-                }
-            }
-        }
+        board.makeChange(r, u, "X ");
     }
 }
