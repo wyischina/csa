@@ -1,5 +1,9 @@
 package com.wyischina;
 
+import java.util.List;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
 public class SwitchDemonstration {
 
     public static void main(String[] args) {
@@ -14,6 +18,7 @@ public class SwitchDemonstration {
             default:
                 System.out.println("default case");
         }
+
     }
 
 }
