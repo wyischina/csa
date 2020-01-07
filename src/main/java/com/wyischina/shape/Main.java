@@ -12,6 +12,15 @@ public class Main {
         for (Shape shape : shapes) {
             shape.draw();
         }
+
+        Drawable[] drawables = new Drawable[10];
+        drawables[0] = new Polygon();
+        drawables[1] = new Ellipsis();
+        drawables[2] = new Background();
+        for (Drawable drawable : drawables) {
+            drawable.draw();
+        }
+
     }
 
 }
