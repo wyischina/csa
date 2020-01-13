@@ -10,7 +10,8 @@ public class Game {
         Dealer dealer = new Dealer();
         Scanner scanner =  new Scanner(System.in);
 
-
+        while (true) {
+            System.out.println("You have" + deck.draw());
+        }
     }
-
 }
