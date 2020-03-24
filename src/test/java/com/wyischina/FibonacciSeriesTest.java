@@ -26,7 +26,7 @@ class FibonacciSeriesTest {
     public void testFibFirstTen() {
         List<Integer> ns = List.of(0,1,1,2,3,5,8,13,21,34,55,89,144);
         for (int i = 0; i < ns.size(); i++) {
-            assertEquals(ns.get(i), FibonacciSeries.fib(i) ,i +"th number is wrong");
+             assertEquals(ns.get(i), FibonacciSeries.fib(i) ,i +"th number is wrong");
         }
     }
 }

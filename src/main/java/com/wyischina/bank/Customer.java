@@ -2,30 +2,23 @@ package com.wyischina.bank;
 
 public class Customer {
 
-    String name;
-    Account savingAccount;
-    Account currentAccount;
+    private String name;
+    private Account setSavingsAccount;
+    private Account setCurrentAccount;
 
-    public int getTotalBalance() {
-        int total = 0;
-        if (savingAccount != null) {
-            total = total + savingAccount.getBalance();
-        }
-        if (currentAccount != null) {
-            total = total + currentAccount.getBalance();
-        }
-        return total;
+    public Customer(String name){
+        this.name = name;
     }
 
-    public void setSavingAccount(Account acc) {
-
-        this.savingAccount = acc;
+    public double getTotalBalance(){
+        return this.setSavingsAccount.getBalance() + this.setCurrentAccount.getBalance();
     }
 
-    public void setCurrentAccount(Account acc) {
-
-        this.currentAccount = acc;
+    public void setSavingsAccount(Account acc){
+        this.setSavingsAccount = acc;
     }
 
-
+    public void setCurrentAccount(Account acc){
+        this.setCurrentAccount = acc;
+    }
 }

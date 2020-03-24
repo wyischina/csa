@@ -2,6 +2,7 @@ package com.wyischina;
 
 import java.util.Scanner;
 
+
 public class TurtleNgon {
 
     public static void main(String[] args) {
@@ -14,6 +15,12 @@ public class TurtleNgon {
 
     public static void drawNgon(Turtle turtle, int n, int length) {
         // todo: implement this method to draw a polygon of n-side.
+        int angle;
+        angle = 360 / n;
+        for (int i= 1; i <= n; i++) {
+            turtle.forward(20);
+            turtle.left(angle);
+        }
     }
 
 }

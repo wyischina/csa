@@ -2,18 +2,17 @@ package com.wyischina.bank;
 
 public class Account {
 
-    private int balance = 0;
+    private double balance;
 
-    public void addTransaction(Transaction t) {
+    public void addTransaction(Transaction t){
         if (t.isDebit) {
-            balance = balance + t.amount;
+            this.balance -= t.amount;
         } else {
-            balance = balance - t.amount;
+            this.balance += t.amount;
         }
     }
 
-    public int getBalance() {
+    public double getBalance(){
         return balance;
     }
-
 }
