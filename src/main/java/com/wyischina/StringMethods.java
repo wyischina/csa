@@ -18,6 +18,12 @@ public class StringMethods {
      * @return
      */
     public String padLeft(String s, int n, char pad) {
+        if (s.length() > n){
+            return s;
+        }
+        StringBuilder pads = new StringBuilder();
+        pads.append(String.valueOf(pad).repeat(n - s.length()));
+        s = pads.toString().concat(s);
         return s;
     }
 
